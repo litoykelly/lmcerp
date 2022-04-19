@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block titre %}Employe{% endblock titre %}
+{% block contenu %}
+  <h2>Employe</h2>
+  <hr>
+
+  <table border="1" width="100%">
+    <tr>
+        <th>Nom</th>
+        <th>Fonction</th>
+        <th>Grade</th>
+        <th>Age</th>
+    </tr>
+    {% for employe in employes %}
+    <tr>
+        <td><a href="{% url 'employe_detail' employe.id %}">{{employe}}</a></td>
+        <td>{{employe.fonction}}</td>
+        <td>{{employe.grade}}</td>
+        <td>{{employe.age}} ans</td>
+    </tr>
+    {% endfor %}
+
+  </table>
+{% endblock contenu %}

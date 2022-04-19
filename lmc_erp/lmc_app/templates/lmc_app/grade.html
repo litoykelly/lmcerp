@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block titre %}Grade{% endblock titre %}
+{% block contenu %}
+  <h2>Grade</h2>
+  <hr>
+
+  <table border="1" width="100%">
+    <tr>
+        <th>Nom</th>
+        <th>Sigle</th>
+       
+    </tr>
+    {% for grade in grades %}
+    <tr>
+        <td>{{grade.nom}}</a></td>
+        <td>{{employe.sigle}}</td>
+    </tr>
+    {% endfor %}
+
+  </table>
+{% endblock contenu %}
